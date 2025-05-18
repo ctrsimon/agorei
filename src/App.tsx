@@ -22,7 +22,7 @@ function Navbar() {
   )
 }
 
-function ProtectedRoute({ children }: { children: JSX.Element }) {
+function ProtectedRoute({ children }: { children: React.ReactElement }) {
   const { currentUser } = useAuth()
   if (!currentUser) {
     return <Navigate to="/login" replace />
